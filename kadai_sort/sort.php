@@ -11,18 +11,16 @@
         <?php
         // ソート関数を定義
         function sort_2way($array, $order){
-            if ($order == TRUE) {
+            if ($order === TRUE) {
                 echo "昇順にソートします。<br>";
-                sort($array);
-                foreach ($array as $val) {
-                    echo $val . "<br>";
-                }
+                sort($array);                
             } else {
                 echo "降順にソートします。<br>";
                 rsort($array);
-                foreach ($array as $val) {
-                    echo $val . "<br>";
-                }
+            }
+
+            foreach ($array as $val) {
+                echo $val . "<br>";
             }
         }
 
